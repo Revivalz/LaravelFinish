@@ -1,30 +1,22 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ToDoController;
-use App\Http\Controllers\DiariesController;
+use App\Http\Controllers\CountryController;
 
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/todos', [ToDoController::class, 'index']);
-Route::get('/diaries', [DiariesController::class, 'index']);
 
-Route::get('/todos/create', [ToDoController::class, 'create']);
-Route::get('/diaries/create', [DiariesController::class, 'create']);
+Route::get('/countries', [CountryController::class, 'index']);
 
-Route::get('/todos/{todo}', [ToDoController::class, 'show']);
-Route::get('/diaries/{diary}', [DiariesController::class, 'show']);
+Route::get('/countries/create', [CountryController::class, 'create']);
 
+Route::get('/countries/{country}', [CountryController::class, 'show']);
 
-Route::post('/todos', [ToDoController::class, 'store']); 
-Route::post('/diaries', [DiariesController::class, 'store']); 
+Route::post('/countries', [CountryController::class, 'store']);
 
-Route::get('/todos/{todo}/edit', [ToDoController::class, 'edit']);
-Route::get('/diaries/{diary}/edit', [DiariesController::class, 'edit']);
+Route::get('/countries/{country}/edit', [CountryController::class, 'edit']);
 
-Route::put('/todos/{todo}', [ToDoController::class, 'update']);
-Route::put('/diaries/{diary}', [DiariesController::class, 'update']);
+Route::put('/countries/{country}', [CountryController::class, 'update']);
 
-Route::delete('/todos/{todo}', [ToDoController::class, 'destroy']);
-Route::delete('/diaries/{diary}', [DiariesController::class, 'destroy']);
+Route::delete('/countries/{country}', [CountryController::class, 'destroy']);

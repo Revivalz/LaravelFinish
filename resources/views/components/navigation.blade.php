@@ -10,10 +10,8 @@
 <header>
 <nav>
     <ul>
-        <li><a href="/todos">Visi uzdevumi</a></li>
-        <li><a href="/diaries">Vis pildāmais</a></li>
-        <li><a href="/todos/create">Todos veidošana</a></li>   
-        <li><a href="/diaries/create">Diaries veidošana</a></li>
+        <li><a href="/countries">Visas valstis</a></li>
+        <li><a href="/countries/create">Valsts veidošana</a></li>
 
     </ul>
 </nav>

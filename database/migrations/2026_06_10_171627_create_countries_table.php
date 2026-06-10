@@ -11,13 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-    Schema::create('to_dos', function (Blueprint $table) {
-        $table->id();
-        $table->string("content");
-        $table->boolean("completed");
-        $table->timestamps();
-    });
-
+        Schema::create('countries', function (Blueprint $table) {
+            $table->id();
+            $table->string('name', 100);
+            $table->decimal('area_km2', 8, 2);
+            $table->integer('population');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('to_dos');
+        Schema::dropIfExists('countries');
     }
 };
